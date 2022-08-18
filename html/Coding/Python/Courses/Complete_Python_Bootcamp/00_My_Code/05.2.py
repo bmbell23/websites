@@ -46,7 +46,7 @@ numlist = [0,1,2,3,4,5,6,7,8,9]
 
 "Here we can 'unpack' our tuples"
 # for a,b in tupset:
-#     print(f'The first value in the tuple is {a}')
+#     print(f'The first value in the tuple is {a}.')
 
 "For list with a dictionary"
 d = {'k1':1,'k2':2,'k3':3}
