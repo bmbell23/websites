@@ -4,9 +4,9 @@ Section 05: Python Statements!
 #Section 5.1: If, Elif, and Else
 hungry = False
 if hungry:
-    print('I am starving! Feed me!')
+    print("I'm starving! Feed me!")
 else:
-    print('I am not hungry right now.')
+    print("I'm not hungry right now.")
 
 location = 'Auto Shop'
 if location == 'Auto Shop':
