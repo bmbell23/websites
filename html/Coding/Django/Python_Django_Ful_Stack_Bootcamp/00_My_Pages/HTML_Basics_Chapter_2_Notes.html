@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Basics Chapter 2 Notes</title>
+    </head>
+    <body>
+        <!-- CHAPTER 2 -->
+        <h1>HTML Basics Chapter 2:</h1>
+        <h3>Summary:</h3>
+        <p>This Section will consist of Tables, Forms, Labels, and Selections.</p>
+        <h2>2.1: Tables</h2>
+        <p>Tables can be inserted with a <b>&lt;table border=""&gt;</b> tag. </p>
+        <p>The border thickness can be specified from this tag or left blank for no border.</p>
+        <p>There are then 4 main elements within a table:</p>
+        <ul>
+            <li><b>&lt;thead&gt;</b> - indicates the headers of a table, under which all &lt;th&gt; tags go.</li>
+            <li><b>&lt;th&gt;</b> - indicates header items, such as Num, State, Capital.</li>
+            <li><b>&lt;tr&gt;</b> - indicates a new Table row, under which all &lt;td&gt; tags go.</li>
+            <li><b>&lt;td&gt;</b> - indicates a table cell, which is placed under a specific &lt;tr&gt; tag row.</li>
+            <li><b>&lt;tfoot&gt;</b> - indicates the footer of a table which can appear above the table on top of the header by default.</li>
+        </ul>
+        <p>
+            Below, you can see these skills implemented in a table:
+        </p>
+        <table border="2">
+            <thead>
+                <th>Country Name</th>
+                <th>Country Flag</th>
+                <th>GDP (MUSD)</th>
+            </thead>
+            <tr>
+                <td>United States</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/23px-Flag_of_the_United_States.svg.png" alt="Missing image!!"></a></td>
+                <td>25,346,805</td>
+            </tr>
+            <tr>
+                <td>China</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/23px-Flag_of_the_People%27s_Republic_of_China.svg.png" alt="Missing image!!"></a></td>
+                <td>19,811,593</td>
+            </tr>
+            <tr>
+                <td>Japan</td>
+                <td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/23px-Flag_of_Japan.svg.png" alt="Missing image!!"></a></td>
+                <td>4,912,147</td>
+            </tr>
+            <tfoot><b>Table 1: GDP of Top 3 Countries.</b></tfoot>
+        </table>
+
+        <!-- SECTION 2.2 -->
+        <h2>2.2: Forms</h2>
+        <p>Forms can be used to have a user input information such as an Email and username as shown below.</p>
+        <p>To write a form, use the <b>&lt;form&gt;&lt;/form&gt;</b> decorator separated by lines with <b>&lt;input&gt;</b> decorators in between.</p>
+        <p>An input can be written as <b>&lt;input type="" name="" value""&gt;</b></p>
+        <p>Inputs have 3 values to associate:</p>
+        <ol>
+            <li><b>type</b>: indicates the field type such as email, password, or submit.</li>
+            <li><b>name</b>: indicates the name of the value entered by the user.</li>
+            <li><b>value</b>: indicates the default value of that field before user input.</li>
+        </ol>
+        <p>Here is an Example Login Prompt with three different inputs using the <b>email</b> type, <b>password</b> type, and <b>submit</b> type:</p>
+        <form>
+            <h4>Ex: Please Input your Email and Password</h4>
+            <input type="email" name="useremail" value="Email">
+            <input type="password" name="userpass" value="">
+            <input type="submit" name="submit" id="Submit">
+        </form>
+        <p>Similarly, an input can have other types such as <b>color</b> and <b>text</b>.</p>
+        <form>
+            <h4>Ex: Select a Color and type whatever you want!</h4>
+            <input type="color">
+            <input type="text" name="usertext">
+        </form>
+
+        <!-- SECTION 2.3 -->
+        <h2>2.3: Forms with Labels</h2>
+        <p>Forms can also have <b>actions</b> (such as a URL) to indicate something to do with the information input, and <b>methods</b> (such as "get") to describe what is doing with the input information.</p>
+        <p>Labels can be added to a form by wrapping a  form inside of a label as shown below. by indicating <b>for=""</b> in your label, you can specify a specific label to a specific form.</p>
+        <p><b>Values</b> can be put into forms but will need deleted. Otherwise, <b>placeholders</b> can be put into the field and will vanish when clicked. Below, we see placeholders for both the Email and Password fields.</p>
+        <p>Lastly, you may make a field required by adding the word <b>required</b> at the end of an input tag.</p>
+        <h4>Ex: Enter your Email and Password:</h4>
+        <form action="https://www.facebook.com" method="get">
+            <label for="email">Email:</label>
+                <input id="email" type="email" name="useremail" placeholder="bob.ross@gmail.com" required>
+            <label for="pass">Password:</label>
+                <input id="pass" type="password" name="userpass" placeholder="password" required>
+            <input type="submit" name="" value="Submit">
+
+            <label for=""></label>
+        </form>
+
+        <!-- SECTION 2.4 -->
+        <h2>2.4: Forms and Selections</h2>
+        <p>Radio buttons are another great <b>type</b> of Input, and if the inputs share the same <b>name</b> on multiple radio buttons, you can link them together to only allow one choice. An input should also have an <b>id</b> to indicate what selection was made.</p>
+        <p>A drop-down menu can be put into a form with the <b>select</b> tag wrapped around multiple <b>option</b> tags.</p>
+        <p>Lastly, you can provide a multiple-line text box instead of a single line textbox by with: </p>
+        <p><b>&lt;textarea name="" id="" cols="" rows=""&gt;&lt;/textarea&gt;</b></p>
+        <p>This will allow you to create a textbox that has a specified number of columns and rows in size, and a specified <b>id</b> just like the other inputs.</p>
+        <form method="get">
+            <h4>Ex: What is your favorite markup language?</h4>
+            <label for="html">HTML:</label>
+                <input id="html" type="radio" name="markup">
+            <label for="sgml">SGML:</label>
+                <input id="sgml" type="radio" name="markup">
+            <label for="xml">XML:</label>
+                <input id="xml" type="radio" name="markup">
+            <h4>Ex: How much fun are you having with HTML?</h4>
+            <select name="fun" id="">
+                <option value="5">Tons of fun</option>
+                <option value="4">Kind of fun</option>
+                <option value="3">Fine</option>
+                <option value="2">Not fun</option>
+                <option value="1">I'm miserable</option>
+            </select>
+            <br>
+            <p><h4>Ex: How has learning HTML been for you so far?</h4></p>
+            <textarea name="feedback" id="" cols="60" rows="7"></textarea>
+            <br>
+            <br>
+            <input type="submit" name="Submit">
+        </form>
+        <br>
+        <form action="HTML_Basics_Chapter_1_Test.html">
+            <input type="submit" name="Ch1N" value="HTML Chapter 1 Test">
+        </form>
+        <form action="HTML_Basics_Chapter_2_Test.html">
+            <input type="submit" name="Ch2N" value="HTML Chapter 2 Test">
+        </form>
+        <br>
+    </body>
+</html>

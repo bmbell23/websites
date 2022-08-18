@@ -1,0 +1,4 @@
+Jenkins Integration with Git:
+
+Jenkins integrates with Git in one of two ways:
+    1. Jenkins can check with Git however often

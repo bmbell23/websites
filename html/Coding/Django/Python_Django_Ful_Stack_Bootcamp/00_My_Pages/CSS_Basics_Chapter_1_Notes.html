@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Basics Chapter 1 Notes</title>
+        <link rel="stylesheet" href="CSS_Basics_Chapter_1_Notes_A.css">
+    </head>
+    <body>
+        <h1>CSS Basics Chapter 1 Notes:</h1>
+        <h2>1.1: Basic CSS and Font Colors</h2>
+        <p>We're going to make an HTML list below, and style it in different ways with CSS.</p>
+        <p>We do this by using a <b>link</b> with <b>rel=stylesheet</b> and <b>href=""</b> indicating the <b>.css</b> file to point towards.</p>
+        <p>By typing an HTML element such as <b>"h1"</b> or <b>"li"</b> followed by a <b>"{"</b> we can then insert certain properties for that element.</p>
+        <h3>A list of example properties that can be changed with CSS:</h3>
+        <ul>
+            <li><b>"color:"</b> is an example property that can change the color of text.</li>
+            <li><b>"color:"</b> can also be set using a <b>rgba</b> value to set a color with Red, Green, and Red values  from 0 to 255, and a number between 0 and 1 for alpha. </li>
+            <li><b>"font-size:"</b> is another property that can be modified with values of small, medium, large, x-large, and xx-large</li>
+            <li><b>"font-family:"</b> can indicate many properties aobut the font, weight, spacing, etc.</li>
+        </ul>
+        <h2>1.2: Implementing Divs and Spans</h2>
+        <p>Now that we know how to connect certain HTML tags to have specific CSS attributes, we can impact <b>divs</b> and <b>spans</b>, which we didn't do much with before.</p>
+        <p></p>
+        <div>
+            <p>This is text inside the <b>div</b> tag, so it will be impacted by any div-assigned attributes.</p> <span>This however is text inside the span inside the div. It inherits div attributes, but also picks up span attributes.</span>
+        </div>
+        <p>We can also apply CSS to the <b>body</b> to specify a background as a URL, which we've done on this page.</p>
+        <h2>1.3: Selectors, Classes, IDs, and Elements</h2>
+        <p><b>Selectors</b> in general are used to target HTML elements that we want to style, similar to what we've done so far. This takes all <b>li</b> elements, <b>h1</b> elements, etc. and selects them to be styled in a specific way.</p>
+        <p>We can <b>IDs</b> to target single elements and use <b>classes</b> to target groups of elements.</p>
+        <div class="firstDiv">
+            <p>This text is in the <b>firstDiv</b> class, which was specified in CSS to have: <b>.firstDiv{color: brown;}</b></p>
+        </div>
+        <div class="SecondDiv">
+            <p>This text is in the <b>SecondDiv</b> class, which was specified in CSS to have: <b>.SecondDiv{color: blueviolet;}</b></p>
+        </div>
+        <p id="silly">This text in a simple paragraph that has the <b>id="silly"</b>, which was set in CSS with <b>#silly</b> to have green color and un underline text-decoration. Note that an <b>id</b> must be unique.</p>
+        <ul id="waffles">
+            <li>Confirm? <input type="checkbox" name="" id=""></li>
+            <li>Feedback? <input type="text" name="" id=""></li>
+            <li><a href="www.facebook.com">Facebook</a></li>
+            <li><a href="www.google.com">Google</a></li>
+        </ul>
+        <p>You can use *{} as a selector in CSS to override quite a few things, but this is fairly uncommon. The CSS for this page has done this to change font-weight to 750/1000. Tags with IDs will not be impacted.</p>
+        <p>You can also use a "+" to impact multiple selectors at a time. For example, we've now modified all <b>ul+h3</b> items (unordered lists near/under h3 header) to have a 4px purple dotted line, as you now see in Section 1.1.</p>
+        <p>Similarly, we've now made all "<b>li a</b>" tags (anchor tags in list items) become the color red, as you see above with <b>Facebook</b> and <b>Google</b>.</p>
+        <p>However, we can partially override that by defining that all "<b>li a[href="www.google.com]</b>" tags have a black color, as we've done with the Google link above.</p>
+        <br>
+        <form action="HTML_Basics_Chapter_2_Test.html">
+            <input type="submit" name="Ch2T" value="HTML Chapter 2 Test">
+        </form>
+        <form action="CSS_Basics_Chapter_1_Test.html">
+            <input type="submit" name="Ch2T" value="CSS Chapter 1 Test">
+        </form>
+        <br>
+    </body>
+</html>
